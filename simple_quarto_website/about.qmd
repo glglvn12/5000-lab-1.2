@@ -1,0 +1,37 @@
+---
+title: "About"
+---
+
+# About This Data Science Project
+
+This site demonstrates data analysis on Iris dataset.
+
+## Iris Dataset Analysis
+
+The Iris dataset is a popular and fundamental dataset in ML and statistics.
+
+```{python}
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+# Load the Iris dataset
+iris = load_iris()
+iris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+iris_df['species'] = iris.target
+iris_df['species'] = iris_df['species'].map({0: 'setosa', 1: 'versicolor', 2: 'virginica'})
+
+# Calculate correlation matrix
+correlation_matrix = iris_df.iloc[:, :-1].corr()
+
+# Create correlation heatmap
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0,
+            square=True, fmt='.3f', cbar_kws={"shrink": .8})
+plt.title('Iris Dataset - Feature Correlation Matrix', fontsize=16, fontweight='bold')
+plt.tight_layout()
+plt.show()
+```
+
+This correlation analysis reveals the relationships between different iris flower measurements, helping us understand which features are most closely related.

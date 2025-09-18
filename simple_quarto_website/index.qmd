@@ -1,0 +1,80 @@
+---
+title: "Data Science Fundamentals"
+toc: true
+format:
+  html:
+    embed-resources: true
+bibliography: reference.bib
+---
+
+# Introduction to Data Science
+
+Data science is an interdisciplinary field that combines statistics, computer science, and domain expertise to extract insights from data.
+
+## What is Data Science?
+
+Data science encompasses various methodologies and techniques for analyzing structured and unstructured data. It involves the application of statistical methods, machine learning algorithms, and computational tools to discover patterns and generate actionable insights.
+
+Data science processes are well documented in academic literature [@van2016data; @cao2017data].
+
+### Key Components of Data Science
+
+- **Data Collection**: Gathering relevant data from various sources
+- **Data Cleaning**: Preprocessing and preparing data for analysis
+- **Exploratory Data Analysis**: Understanding data patterns and relationships
+- **Machine Learning**: Building predictive and descriptive models
+- **Data Visualization**: Creating meaningful visual representations
+- **Communication**: Presenting findings to stakeholders
+
+## Statistics Foundations
+
+The normal distribution is a fundamental probability distribution used to model
+
+$f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$.
+
+reference [^1]
+
+### Statistical Methods
+
+| Method | Purpose | Example Use Case | Complexity |
+|--------|---------|------------------|------------|
+| Regression | Prediction | Sales forecasting | Medium |
+| Classification | Categorization | Email spam detection | Medium |
+| Clustering | Grouping | Customer segmentation | High |
+| Time Series | Temporal analysis | Stock price prediction | High |
+
+
+## Industry Applications
+
+> "Data is the new oil. It's valuable, but if unrefined it cannot really be used." - Clive Humby
+
+Data science applications span across numerous industries:
+
+![Data Science Applications](https://scaler.com/topics/images/application-of-data-science.webp)
+
+### Real-World Impact
+
+Data science has revolutionized how businesses operate and make decisions. From recommendation systems to autonomous vehicles, the impact is far-reaching.
+
+![Machine Learning Pipeline](https://cdn.educba.com/academy/wp-content/uploads/2024/03/Machine-Learning-Pipeline.jpg)
+
+### Learning Resources
+
+{{< video https://www.youtube.com/embed/xC-c7E5PK0Y >}}
+
+## Data Science Workflow
+
+```{mermaid}
+flowchart TD
+    A[Data Collection] --> B[Data Cleaning]
+    B --> C[EDA]
+    C --> D[Feature Selection and Engineering]
+    D --> E[Model Training]
+    E --> F[Model Evaluation]
+    F --> G[Model Testing]
+    G --> H[Cross validation]
+    H --> A
+```
+
+
+[^1]: The normal distribution was first introduced by Carl Friedrich Gauss.

@@ -1,0 +1,40 @@
+(base) yhkim@YHKIMui-MacBookPro lab03 % git clone https://github.com/glglvn12/5000-lab-1.2.git | tee -a commands.txt
+Cloning into '5000-lab-1.2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+(base) yhkim@YHKIMui-MacBookPro simple_quarto_website % ls
+_quarto.yml	about.qmd	index.qmd	styles.css
+
+(base) yhkim@YHKIMui-MacBookPro simple_quarto_website % rm styles.css| tee -a ../commands.txt
+(base) yhkim@YHKIMui-MacBookPro simple_quarto_website % mkdir images | tee -a ../commands.txt
+(base) yhkim@YHKIMui-MacBookPro simple_quarto_website % mkdir slides | tee -a ../commands.txt
+(base) yhkim@YHKIMui-MacBookPro simple_quarto_website % quarto convert about.qmd | tee -a ../commands.txt 
+Converted to about.ipynb
+
+(base) yhkim@YHKIMui-MacBookPro simple_quarto_website % ls
+_quarto.yml	about.qmd	index.qmd
+about.ipynb	images		slides
+
+(base) yhkim@YHKIMui-MacBookPro simple_quarto_website % more reference.bib 
+@incollection{van2016data,
+  title={Data science in action},
+  author={Van Der Aalst, Wil},
+  booktitle={Process mining: Data science in action},
+  pages={3--23},
+  year={2016},
+  publisher={Springer}
+}
+
+@article{cao2017data,
+  title={Data science: a comprehensive overview},
+  author={Cao, Longbing},
+  journal={ACM Computing Surveys (CSUR)},
+  volume={50},
+  number={3},
+  pages={1--42},
+  year={2017},
+  publisher={ACM New York, NY, USA}
+}

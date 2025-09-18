@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This site demonstrates data analysis on Iris dataset.\n\n\nThe Iris dataset is a popular and fundamental dataset in ML and statistics.\n\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport seaborn as sns\nfrom sklearn.datasets import load_iris\n\n# Load the Iris dataset\niris = load_iris()\niris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)\niris_df['species'] = iris.target\niris_df['species'] = iris_df['species'].map({0: 'setosa', 1: 'versicolor', 2: 'virginica'})\n\n# Calculate correlation matrix\ncorrelation_matrix = iris_df.iloc[:, :-1].corr()\n\n# Create correlation heatmap\nplt.figure(figsize=(10, 8))\nsns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0,\n            square=True, fmt='.3f', cbar_kws={\"shrink\": .8})\nplt.title('Iris Dataset - Feature Correlation Matrix', fontsize=16, fontweight='bold')\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nThis correlation analysis reveals the relationships between different iris flower measurements, helping us understand which features are most closely related."
+  },
+  {
+    "objectID": "about.html#iris-dataset-analysis",
+    "href": "about.html#iris-dataset-analysis",
+    "title": "About",
+    "section": "",
+    "text": "The Iris dataset is a popular and fundamental dataset in ML and statistics.\n\nimport matplotlib.pyplot as plt\nimport pandas as pd\nimport seaborn as sns\nfrom sklearn.datasets import load_iris\n\n# Load the Iris dataset\niris = load_iris()\niris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)\niris_df['species'] = iris.target\niris_df['species'] = iris_df['species'].map({0: 'setosa', 1: 'versicolor', 2: 'virginica'})\n\n# Calculate correlation matrix\ncorrelation_matrix = iris_df.iloc[:, :-1].corr()\n\n# Create correlation heatmap\nplt.figure(figsize=(10, 8))\nsns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0,\n            square=True, fmt='.3f', cbar_kws={\"shrink\": .8})\nplt.title('Iris Dataset - Feature Correlation Matrix', fontsize=16, fontweight='bold')\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nThis correlation analysis reveals the relationships between different iris flower measurements, helping us understand which features are most closely related."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Science Fundamentals",
+    "section": "",
+    "text": "Data science is an interdisciplinary field that combines statistics, computer science, and domain expertise to extract insights from data.\n\n\nData science encompasses various methodologies and techniques for analyzing structured and unstructured data. It involves the application of statistical methods, machine learning algorithms, and computational tools to discover patterns and generate actionable insights.\nData science processes are well documented in academic literature (Van Der Aalst 2016; Cao 2017).\n\n\n\nData Collection: Gathering relevant data from various sources\nData Cleaning: Preprocessing and preparing data for analysis\nExploratory Data Analysis: Understanding data patterns and relationships\nMachine Learning: Building predictive and descriptive models\nData Visualization: Creating meaningful visual representations\nCommunication: Presenting findings to stakeholders\n\n\n\n\n\nThe normal distribution is a fundamental probability distribution used to model\n\\(f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2}\\).\nreference 1\n\n\n\n\n\nMethod\nPurpose\nExample Use Case\nComplexity\n\n\n\n\nRegression\nPrediction\nSales forecasting\nMedium\n\n\nClassification\nCategorization\nEmail spam detection\nMedium\n\n\nClustering\nGrouping\nCustomer segmentation\nHigh\n\n\nTime Series\nTemporal analysis\nStock price prediction\nHigh\n\n\n\n\n\n\n\n\n“Data is the new oil. It’s valuable, but if unrefined it cannot really be used.” - Clive Humby\n\nData science applications span across numerous industries:\n\n\n\nData Science Applications\n\n\n\n\nData science has revolutionized how businesses operate and make decisions. From recommendation systems to autonomous vehicles, the impact is far-reaching.\n\n\n\nMachine Learning Pipeline\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart TD\n    A[Data Collection] --&gt; B[Data Cleaning]\n    B --&gt; C[EDA]\n    C --&gt; D[Feature Selection and Engineering]\n    D --&gt; E[Model Training]\n    E --&gt; F[Model Evaluation]\n    F --&gt; G[Model Testing]\n    G --&gt; H[Cross validation]\n    H --&gt; A"
+  },
+  {
+    "objectID": "index.html#what-is-data-science",
+    "href": "index.html#what-is-data-science",
+    "title": "Data Science Fundamentals",
+    "section": "",
+    "text": "Data science encompasses various methodologies and techniques for analyzing structured and unstructured data. It involves the application of statistical methods, machine learning algorithms, and computational tools to discover patterns and generate actionable insights.\nData science processes are well documented in academic literature (Van Der Aalst 2016; Cao 2017).\n\n\n\nData Collection: Gathering relevant data from various sources\nData Cleaning: Preprocessing and preparing data for analysis\nExploratory Data Analysis: Understanding data patterns and relationships\nMachine Learning: Building predictive and descriptive models\nData Visualization: Creating meaningful visual representations\nCommunication: Presenting findings to stakeholders"
+  },
+  {
+    "objectID": "index.html#statistics-foundations",
+    "href": "index.html#statistics-foundations",
+    "title": "Data Science Fundamentals",
+    "section": "",
+    "text": "The normal distribution is a fundamental probability distribution used to model\n\\(f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{1}{2}\\left(\\frac{x-\\mu}{\\sigma}\\right)^2}\\).\nreference 1\n\n\n\n\n\nMethod\nPurpose\nExample Use Case\nComplexity\n\n\n\n\nRegression\nPrediction\nSales forecasting\nMedium\n\n\nClassification\nCategorization\nEmail spam detection\nMedium\n\n\nClustering\nGrouping\nCustomer segmentation\nHigh\n\n\nTime Series\nTemporal analysis\nStock price prediction\nHigh"
+  },
+  {
+    "objectID": "index.html#industry-applications",
+    "href": "index.html#industry-applications",
+    "title": "Data Science Fundamentals",
+    "section": "",
+    "text": "“Data is the new oil. It’s valuable, but if unrefined it cannot really be used.” - Clive Humby\n\nData science applications span across numerous industries:\n\n\n\nData Science Applications\n\n\n\n\nData science has revolutionized how businesses operate and make decisions. From recommendation systems to autonomous vehicles, the impact is far-reaching.\n\n\n\nMachine Learning Pipeline"
+  },
+  {
+    "objectID": "index.html#data-science-workflow",
+    "href": "index.html#data-science-workflow",
+    "title": "Data Science Fundamentals",
+    "section": "",
+    "text": "flowchart TD\n    A[Data Collection] --&gt; B[Data Cleaning]\n    B --&gt; C[EDA]\n    C --&gt; D[Feature Selection and Engineering]\n    D --&gt; E[Model Training]\n    E --&gt; F[Model Evaluation]\n    F --&gt; G[Model Testing]\n    G --&gt; H[Cross validation]\n    H --&gt; A"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Data Science Fundamentals",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe normal distribution was first introduced by Carl Friedrich Gauss.↩︎"
+  },
+  {
+    "objectID": "slides/slides.html#introduction-to-iris-dataset",
+    "href": "slides/slides.html#introduction-to-iris-dataset",
+    "title": "Iris Data Analysis",
+    "section": "Introduction to Iris Dataset",
+    "text": "Introduction to Iris Dataset\n\nFamous dataset in data science\n150 flower samples\n3 species: setosa, versicolor, virginica\n4 measurements per flower\n\n\nIris flower"
+  },
+  {
+    "objectID": "slides/slides.html#dataset-features",
+    "href": "slides/slides.html#dataset-features",
+    "title": "Iris Data Analysis",
+    "section": "Dataset Features",
+    "text": "Dataset Features\n\nSepal length (cm)\nSepal width (cm)\nPetal length (cm)\nPetal width (cm)\n\n\nIris measurements"
+  },
+  {
+    "objectID": "slides/slides.html#data-analysis-results",
+    "href": "slides/slides.html#data-analysis-results",
+    "title": "Iris Data Analysis",
+    "section": "Data Analysis Results",
+    "text": "Data Analysis Results\nKey findings:\n\nStrong correlation between petal features\nSpecies show distinct patterns\nPerfect for classification tasks\n\nData science methods help reveal these patterns (Cao 2017)."
+  },
+  {
+    "objectID": "slides/slides.html#navigation",
+    "href": "slides/slides.html#navigation",
+    "title": "Iris Data Analysis",
+    "section": "Navigation",
+    "text": "Navigation\nBack to Main_Page\n\n\n\n\nCao, Longbing. 2017. “Data Science: A Comprehensive Overview.” ACM Computing Surveys (CSUR) 50 (3): 1–42."
+  }
+]

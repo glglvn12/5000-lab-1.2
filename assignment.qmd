@@ -1,0 +1,121 @@
+---
+format:
+  html:
+    embed-resources: true
+---
+
+# Lab: Assignment
+`Git, Quarto, and Remote file transfer`
+
+<!-- **IMPORTANT:** The lab shown here (on the website) is just an HTML version, included for reference. To download the assignment, please navigate to the Labs tab in the Share-point dropdown menu in the website’s navigation bar. The relevant assignment can be determined from the folder’s name, click on the three dots and select download to get access to the assignment. -->
+
+## Useful reference recordings
+
+
+- [Git introduction](https://jfh.georgetown.domains/centralized-lecture-content/content/computer-science/general-concepts/git-introduction/notes.html)
+- [Quarto introduction](https://jfh.georgetown.domains/centralized-lecture-content/content/data-science/publishing-and-communication-tools/quarto/quarto-introduction/notes.html)
+- [Quarto website creation demo](https://jfh.georgetown.domains/centralized-lecture-content/content/data-science/publishing-and-communication-tools/quarto/quarto-website-creation-demo/video.html)
+- [Bibtex and citation management](https://jfh.georgetown.domains/centralized-lecture-content/content/data-science/publishing-and-communication-tools/quarto/bibtex-and-citation-management/video.html)
+- [Gu domains remote access](https://jfh.georgetown.domains/centralized-lecture-content/content/computer-science/general-concepts/gu-domains-remote-access/notes.html)
+- [Ssh scp rsync demo](https://jfh.georgetown.domains/centralized-lecture-content/content/computer-science/general-concepts/ssh-scp-rsync-demo/video.html)
+
+
+**Note**: We will be  moving back to more "traditional" Data-science methods in the coming weeks, however, we want you to acquire the following Computer-Science fundamentals as early as possible! 
+ 
+`Important`: If you don't know how to do something, start first by `Googling`, e.g *how to embed a video in quarto*
+
+## Assignment components
+
+* **WINDOWS USERS**: For terminal commands, ideally use `WSL`, but if not, the commands should work using a combination of  `anaconda powershell` and/or `windows powershell`
+
+### Component-1
+
+*  Create an online repo on your private GitHub account called `5000-lab-1.2`, include a README.md file
+  * **Submission**: take screenshot of the created repo from the browser --> `github-1.png`
+
+### Component-2
+
+* Use the terminal, to Clone the repo to your local machine with `git clone` 
+  * **Submission**: Record the commands and command output in a text file `commands.txt` for later upload to canvas
+
+### Component-3
+
+* Make sure the `Quarto` extension is installed in VS-Code.
+* Using VS-Code –> New file –> “Quarto project” –> create a blank Quarto “Website” project in your  `5000-lab-1.2` repo call `simple_quarto_website`
+  * **Note**: All paths in the website should be relative NOT absolute
+* Add a `reference.bib` file to the repo, use google-scholar to get **TWO** arbitrary `bibtex`  citations to put in this file
+* From the terminal inside `5000-lab-1.2/simple_quarto_website`
+  * Run `rm styles.css` to remove `styles.css` file and remove `css: styles.css` line from `_quarto.yml`
+  * Run `mkdir images` inside `5000-lab-1.2/simple_quarto_website` to make a folder
+  * Run `mkdir slides` inside `5000-lab-1.2/simple_quarto_website` to make a folder
+  * Convert `about.qmd` to `about.ipynb` with `quarto convert about.qmd` 
+  * Run `ls` to see the folder contents 
+  * Run `more reference.bib`
+  * **Submission**: Record the commands & command output in a text file `commands.txt` for later upload to canvas
+* modify  `_quarto.yml` accordingly `- about.qmd` --> `- about.ipynb`
+
+### Component-4
+
+* **Note**: Use `quarto preview` from inside `5000-lab-1.2/simple_quarto_website` to monitor your progress as you do the following steps
+* Inside `index.qmd` do the following
+  * Add some text separated by header (h1,h2,h3) (call the sections whatever you want, be professional) 
+    * **Note**: Use of `ipsum lorem` place-holder text is allowed
+    * Some of the text must be formatted text with two columns
+    * Some of the text must be in a bulleted list 
+  * Add at least one markdown table to the page
+  * Add at least one inline-math LaTex equation `$ $`
+  * Make sure there is a table of contents on the page 
+  * Add at least one non inline-math LaTex equation `$$  $$` 
+  * Include a least one foot-note in the file `[^1]`
+  * Include at least one quote using `>`
+  * Add at least two embedded images sortd in  (be professional)
+  * Add at least one embedded video  (be professional)
+  * Include at least one `Mermaid` diagram
+  * Include at least one instance of the citations from your `.bib` file
+
+### Component-5
+
+* Inside `about.ipynb` do the following
+  * Add some text separated by header (h1,h2,h3) (call them whatever you want but be professional) 
+    * **Note**: Use of `ipsum lorem` place-holder text is allowed
+  * Add at least one `python code cell` with an output plot (any plot is fine)
+
+### Component-6
+
+* Create a folder `slides` in the repo, if you haven't already 
+  * Inside `slides/slides.ipynb` build a simple presentation file using `reveal.js` format 
+    * See the following for more  https://quarto.org/docs/presentations/revealjs/
+    * Modify the `yaml` header in `slides.ipynb` to set this up
+* Make at least 3 slides inside `slides/slides.ipynb`, using the syntax `##` to separate slides
+* Include at least one citation in the slide deck from your `reference.bib` file  
+* Include at least two images in the slide-deck, stored the `.pngs` (or what-ever format) in `slides/images`
+* Add at least one `python code cell`, Using `code-folding` with the output plot shown in the slide deck 
+
+### Component-7
+
+* Render your final website from within `5000-lab-1.2/simple_quarto_website`
+  * `quarto render` 
+  * If all goes well, this will create an `_site` folder with your website 
+* **Submission**: Compress your `5000-lab-1.2` folder for upload to Canvas
+
+### Component-8
+
+* From command line, sync your changes to github with `git add`, `git commit`, `git push` 
+  * **Submission**: Record the commands & command output in a text file `commands.txt` for later upload to canvas
+  * **Submission**: Take a screenshot of the updated cloud repo on `github.com` from the browser --> `github-2.png`
+
+### Component-9
+
+* Use either `rsync` or `scp` to remotely copy your `_site` to your GU domains server `public_html/_site`
+  * **Submission**: record the commands and command output in a text file `commands.txt` for later upload to canvas
+  * **Submission**: Take a screen shot of the website hosted on the GU domains server --> `website.png` 
+
+### Component-10
+
+* Create either a Zotero (or Mendeley) account, download the software, and add at least one PDF & associated bib-text to the software. 
+* As you do research in the DSAN program, you should start collecting your PDFs and associated citations inside your reference manager 
+* **Submission**: take screenshot of the reference manager software running --> `reference-manager.png`
+
+## Final submission 
+
+**Upload all of the various sub-components submissions to Canvas**
